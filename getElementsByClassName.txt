@@ -1,0 +1,6 @@
+var t = document.getElementsByClassName("hello")[0];
+		console.log(t.class);???
+
+		console.log(Element.prototype);
+className,与id都是存储在节点对象的原型中，
+而每次调用的节点属性都是从原型中共享调用的

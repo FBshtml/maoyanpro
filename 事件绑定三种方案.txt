@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>事件的三种绑定</title>
+	<style type="text/css">
+		.mod{
+			width: 200px;
+			height: 200px; 
+			background-color: blue;
+		}
+		.mod_mod{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+<!-- 	/////////////////////////////////////在dom元素里直接绑定 -->
+ <div class="mod" onclick="alert('你好');"></div>
+ <!-- ///////////////////////////////////////////////在js中代码绑定事件 -->
+ <div class="mod_mod"></div>
+ <script type="">
+ 	document.getElementsByClassName("mod")[0].onclick=function(){
+ 		alert("你还好么?");
+ 	}
+ 	/////////////////////////////////////////////////////////////用函数中绑定事件，第三个参数false默认为事件冒泡
+ 	document.getElementsByClassName('mod_mod')[0].addEventListener('click',hello,false);
+ 	function hello(){
+ 		alert("你知道个锤子哦!");
+ 	}
+ 	////////////////////////////////////////////////////////在IE旧版本中绑定事件,无法规定是事件冒泡还是捕获
+ 	document.getElementsByClassName('mod_mod')[0].attachEvent('click',hello);
+ </script>
+</body>
+</html>

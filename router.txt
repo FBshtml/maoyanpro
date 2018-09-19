@@ -1,0 +1,6 @@
+路由的写法 
+{
+      path: '/',
+      name: 'home',
+      component: () => import('@/views/Home.vue')
+    },
